@@ -35,6 +35,4 @@ Release
 *.stex
 
 # Ignore import
-/.import
 *.import
-*.png.import
