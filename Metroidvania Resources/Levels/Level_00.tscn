@@ -1,0 +1,54 @@
+[gd_scene load_steps=8 format=2]
+
+[ext_resource path="res://Metroidvania Resources/Levels/Level.tscn" type="PackedScene" id=1]
+[ext_resource path="res://Metroidvania Resources/World/Door.tscn" type="PackedScene" id=2]
+[ext_resource path="res://Metroidvania Resources/DoorConnections/00_link_01.tres" type="Resource" id=3]
+[ext_resource path="res://Metroidvania Resources/World/SaveStation.tscn" type="PackedScene" id=4]
+[ext_resource path="res://Metroidvania Resources/Enemies/Spikes.tscn" type="PackedScene" id=5]
+[ext_resource path="res://Metroidvania Resources/Enemies/WalkingEnemy.tscn" type="PackedScene" id=6]
+[ext_resource path="res://Metroidvania Resources/Enemies/FlyingEnemy.tscn" type="PackedScene" id=7]
+
+[node name="Level_00" instance=ExtResource( 1 )]
+
+[node name="TileMap" parent="." index="0"]
+tile_data = PoolIntArray( 65532, 0, 0, 65533, 0, 1, 65534, 0, 1, 65535, 0, 1, 0, 0, 1, 1, 0, 1, 2, 0, 1, 3, 0, 1, 4, 0, 1, 5, 0, 1, 6, 0, 1, 7, 0, 5, 8, 0, 196609, 9, 0, 196609, 10, 0, 6, 11, 0, 1, 12, 0, 1, 13, 0, 1, 14, 0, 1, 15, 0, 1, 16, 0, 1, 17, 0, 1, 18, 0, 1, 19, 0, 1, 20, 0, 1, 21, 0, 1, 22, 0, 1, 23, 0, 1, 24, 0, 1, 25, 0, 1, 26, 0, 2, 131068, 0, 65540, 131069, 0, 131073, 131070, 0, 131073, 131071, 0, 131073, 65536, 0, 131073, 65537, 0, 131073, 65538, 0, 131073, 65539, 0, 131073, 65540, 0, 131073, 65541, 0, 131073, 65542, 0, 131073, 65543, 0, 131074, 65546, 0, 131072, 65547, 0, 131073, 65548, 0, 131073, 65549, 0, 131073, 65550, 0, 131073, 65551, 0, 131073, 65552, 0, 131073, 65553, 0, 131073, 65554, 0, 131073, 65555, 0, 131073, 65556, 0, 131073, 65557, 0, 131073, 65558, 0, 131073, 65559, 0, 131073, 65560, 0, 131073, 65561, 0, 65542, 65562, 0, 65538, 196604, 0, 65539, 131097, 0, 65536, 131098, 0, 65538, 262140, 0, 65539, 196633, 0, 65536, 196634, 0, 65538, 327676, 0, 65539, 262169, 0, 65536, 262170, 0, 65538, 393212, 0, 65539, 327705, 0, 65536, 327706, 0, 65538, 458748, 0, 131076, 458749, 0, 2, 393241, 0, 65536, 393242, 0, 65538, 524284, 0, 65536, 524285, 0, 65538, 458777, 0, 65536, 458778, 0, 65538, 589820, 0, 65536, 589821, 0, 131077, 589822, 0, 1, 589823, 0, 2, 524313, 0, 131072, 524314, 0, 131074, 655356, 0, 65536, 655357, 0, 65537, 655358, 0, 65537, 655359, 0, 65538, 720892, 0, 65536, 720893, 0, 65537, 720894, 0, 65537, 720895, 0, 65538, 655379, 0, 0, 655380, 0, 1, 655381, 0, 2, 786428, 0, 65536, 786429, 0, 65537, 786430, 0, 65537, 786431, 0, 131077, 720896, 0, 1, 720897, 0, 1, 720898, 0, 2, 720907, 1, 0, 720908, 0, 0, 720909, 0, 1, 720910, 0, 1, 720911, 0, 2, 720912, 2, 6, 720915, 0, 65536, 720916, 0, 65537, 720917, 0, 131077, 720918, 0, 1, 720919, 0, 1, 720920, 0, 1, 720921, 0, 1, 720922, 0, 2, 851964, 0, 65536, 851965, 0, 65537, 851966, 0, 65537, 851967, 0, 65537, 786432, 0, 65537, 786433, 0, 65537, 786434, 0, 131077, 786435, 0, 1, 786436, 0, 2, 786440, 1, 0, 786441, 0, 0, 786442, 0, 1, 786443, 0, 1, 786444, 0, 131078, 786445, 0, 65537, 786446, 0, 65537, 786447, 0, 131077, 786448, 0, 1, 786449, 0, 1, 786450, 0, 1, 786451, 0, 131078, 786452, 0, 65537, 786453, 0, 65537, 786454, 0, 65537, 786455, 0, 65537, 786456, 0, 65537, 786457, 0, 65537, 786458, 0, 65538, 917500, 0, 131072, 917501, 0, 131073, 917502, 0, 131073, 917503, 0, 131073, 851968, 0, 131073, 851969, 0, 131073, 851970, 0, 131073, 851971, 0, 131073, 851972, 0, 196613, 851973, 0, 196609, 851974, 0, 196609, 851975, 0, 196609, 851976, 0, 196609, 851977, 0, 196614, 851978, 0, 131073, 851979, 0, 131073, 851980, 0, 131073, 851981, 0, 131073, 851982, 0, 131073, 851983, 0, 131073, 851984, 0, 131073, 851985, 0, 131073, 851986, 0, 131073, 851987, 0, 131073, 851988, 0, 131073, 851989, 0, 131073, 851990, 0, 131073, 851991, 0, 131073, 851992, 0, 131073, 851993, 0, 131073, 851994, 0, 131074 )
+
+[node name="Door" parent="." index="1" instance=ExtResource( 2 )]
+position = Vector2( 424, 160 )
+connection = ExtResource( 3 )
+new_level_path = "res://Metroidvania Resources/Levels/Level_01.tscn"
+
+[node name="SpikesCollection" type="Node2D" parent="." index="2"]
+
+[node name="Spikes" parent="SpikesCollection" index="0" instance=ExtResource( 5 )]
+position = Vector2( -32, 38 )
+rotation = 1.5708
+
+[node name="Spikes2" parent="SpikesCollection" index="1" instance=ExtResource( 5 )]
+position = Vector2( -32, 53 )
+rotation = 1.5708
+
+[node name="Spikes3" parent="SpikesCollection" index="2" instance=ExtResource( 5 )]
+position = Vector2( -32, 69 )
+rotation = 1.5708
+
+[node name="Spikes6" parent="SpikesCollection" index="3" instance=ExtResource( 5 )]
+position = Vector2( 384, 53 )
+rotation = -1.5708
+
+[node name="Spikes5" parent="SpikesCollection" index="4" instance=ExtResource( 5 )]
+position = Vector2( 384, 68 )
+rotation = -1.5708
+
+[node name="Spikes4" parent="SpikesCollection" index="5" instance=ExtResource( 5 )]
+position = Vector2( 384, 84 )
+rotation = -1.5708
+
+[node name="SaveStation" parent="." index="3" instance=ExtResource( 4 )]
+position = Vector2( 330, 160 )
+
+[node name="WalkingEnemy" parent="." index="4" instance=ExtResource( 6 )]
+position = Vector2( 226, 176 )
+
+[node name="FlyingEnemy" parent="." index="5" instance=ExtResource( 7 )]
+position = Vector2( 326, 114 )

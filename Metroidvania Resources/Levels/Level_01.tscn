@@ -1,0 +1,47 @@
+[gd_scene load_steps=10 format=2]
+
+[ext_resource path="res://Metroidvania Resources/World/Door.tscn" type="PackedScene" id=1]
+[ext_resource path="res://Metroidvania Resources/Levels/Level.tscn" type="PackedScene" id=2]
+[ext_resource path="res://Metroidvania Resources/DoorConnections/00_link_01.tres" type="Resource" id=3]
+[ext_resource path="res://Metroidvania Resources/DoorConnections/01_link_02.tres" type="Resource" id=4]
+[ext_resource path="res://Metroidvania Resources/World/SaveStation.tscn" type="PackedScene" id=5]
+[ext_resource path="res://Metroidvania Resources/Enemies/WalkingEnemy.tscn" type="PackedScene" id=6]
+[ext_resource path="res://Metroidvania Resources/Player/MissilesPowerup.tscn" type="PackedScene" id=7]
+[ext_resource path="res://Metroidvania Resources/Enemies/CrawlingEnemy.tscn" type="PackedScene" id=8]
+[ext_resource path="res://Metroidvania Resources/Enemies/PlantEnemy.tscn" type="PackedScene" id=9]
+
+[node name="Level_01" instance=ExtResource( 2 )]
+
+[node name="TileMap" parent="." index="0"]
+tile_data = PoolIntArray( 0, 0, 0, 1, 0, 5, 2, 0, 196609, 3, 0, 196609, 4, 0, 196609, 5, 0, 196609, 6, 0, 196609, 7, 0, 6, 8, 0, 1, 9, 0, 5, 10, 0, 196609, 11, 0, 196609, 12, 0, 196609, 13, 0, 196609, 14, 0, 6, 15, 0, 1, 16, 0, 1, 17, 0, 1, 18, 0, 1, 19, 0, 1, 20, 0, 2, 65536, 0, 65536, 65537, 0, 65538, 65543, 0, 65536, 65544, 0, 65537, 65545, 0, 65538, 65550, 0, 65536, 65551, 0, 65537, 65552, 0, 65537, 65553, 0, 65537, 65554, 0, 65537, 65555, 0, 65537, 65556, 0, 65538, 131072, 0, 65536, 131073, 0, 65538, 131079, 0, 131072, 131080, 0, 131073, 131081, 0, 131074, 131086, 0, 65536, 131087, 0, 65537, 131088, 0, 65541, 131089, 0, 131073, 131090, 0, 65542, 131091, 0, 65537, 131092, 0, 65538, 196608, 0, 131072, 196609, 0, 131074, 196622, 0, 131072, 196623, 0, 131073, 196624, 0, 131074, 196626, 0, 65536, 196627, 0, 65537, 196628, 0, 65538, 262162, 0, 65536, 262163, 0, 65537, 262164, 0, 65538, 327698, 0, 131072, 327699, 0, 65542, 327700, 0, 65538, 393216, 0, 0, 393217, 0, 1, 393218, 0, 1, 393219, 0, 1, 393220, 0, 1, 393221, 0, 1, 393222, 0, 2, 393235, 0, 131072, 393236, 0, 131074, 458752, 0, 65536, 458753, 0, 65537, 458754, 0, 65537, 458755, 0, 65537, 458756, 0, 65537, 458757, 0, 65537, 458758, 0, 65538, 524288, 0, 65536, 524289, 0, 65541, 524290, 0, 131073, 524291, 0, 131073, 524292, 0, 65542, 524293, 0, 65537, 524294, 0, 131077, 524295, 0, 2, 589824, 0, 65536, 589825, 0, 65538, 589828, 0, 131072, 589829, 0, 65542, 589830, 0, 65537, 589831, 0, 131077, 589832, 0, 1, 589833, 0, 1, 589834, 0, 2, 589842, 1, 0, 589843, 0, 0, 589844, 0, 2, 655360, 0, 131072, 655361, 0, 131074, 655365, 0, 65536, 655366, 0, 65537, 655367, 0, 65537, 655368, 0, 65537, 655369, 0, 65537, 655370, 0, 65538, 655377, 1, 0, 655378, 0, 0, 655379, 0, 131078, 655380, 0, 65538, 720901, 0, 65536, 720902, 0, 65537, 720903, 0, 65537, 720904, 0, 65537, 720905, 0, 65537, 720906, 0, 131077, 720907, 0, 1, 720908, 0, 1, 720909, 0, 1, 720910, 0, 1, 720911, 0, 1, 720912, 0, 1, 720913, 0, 1, 720914, 0, 131078, 720915, 0, 65537, 720916, 0, 65538, 786437, 0, 131072, 786438, 0, 131073, 786439, 0, 131073, 786440, 0, 131073, 786441, 0, 131073, 786442, 0, 131073, 786443, 0, 131073, 786444, 0, 131073, 786445, 0, 131073, 786446, 0, 131073, 786447, 0, 131073, 786448, 0, 131073, 786449, 0, 131073, 786450, 0, 131073, 786451, 0, 131073, 786452, 0, 131074 )
+
+[node name="Door" parent="." index="1" instance=ExtResource( 1 )]
+position = Vector2( 8, 80 )
+scale = Vector2( -1, 1 )
+connection = ExtResource( 3 )
+new_level_path = "res://Metroidvania Resources/Levels/Level_00.tscn"
+
+[node name="Door2" parent="." index="2" instance=ExtResource( 1 )]
+position = Vector2( 328, 128 )
+connection = ExtResource( 4 )
+new_level_path = "res://Metroidvania Resources/Levels/Level_02.tscn"
+
+[node name="SaveStation" parent="." index="3" instance=ExtResource( 5 )]
+position = Vector2( 234, 176 )
+
+[node name="CrawlingEnemy" parent="." index="4" instance=ExtResource( 8 )]
+position = Vector2( 318, 144 )
+WALKING_DIRECTION = -1
+
+[node name="PlantEnemy" parent="." index="5" instance=ExtResource( 9 )]
+position = Vector2( 162, 144 )
+
+[node name="PlantEnemy2" parent="." index="6" instance=ExtResource( 9 )]
+position = Vector2( 248, 64 )
+rotation = -3.14159
+
+[node name="MissilesPowerup" parent="." index="7" instance=ExtResource( 7 )]
+position = Vector2( 103, 83 )
+
+[node name="WalkingEnemy" parent="." index="8" instance=ExtResource( 6 )]
+position = Vector2( 188, 176 )

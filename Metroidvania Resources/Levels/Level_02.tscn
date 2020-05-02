@@ -1,0 +1,88 @@
+[gd_scene load_steps=11 format=2]
+
+[ext_resource path="res://Metroidvania Resources/Levels/Level.tscn" type="PackedScene" id=1]
+[ext_resource path="res://Metroidvania Resources/Enemies/BossEnemy.tscn" type="PackedScene" id=2]
+[ext_resource path="res://Metroidvania Resources/Enemies/Spikes.tscn" type="PackedScene" id=3]
+[ext_resource path="res://Metroidvania Resources/World/Door.tscn" type="PackedScene" id=4]
+[ext_resource path="res://Metroidvania Resources/DoorConnections/01_link_02.tres" type="Resource" id=5]
+[ext_resource path="res://Metroidvania Resources/World/Trigger.tscn" type="PackedScene" id=6]
+[ext_resource path="res://Metroidvania Resources/Levels/Level_02.gd" type="Script" id=7]
+[ext_resource path="res://Metroidvania Resources/World/TileMap.tscn" type="PackedScene" id=8]
+[ext_resource path="res://Metroidvania Resources/Player/MissilesPowerup.tscn" type="PackedScene" id=9]
+
+[sub_resource type="RectangleShape2D" id=1]
+extents = Vector2( 10, 14.5246 )
+
+[node name="Level_02" instance=ExtResource( 1 )]
+script = ExtResource( 7 )
+
+[node name="TileMap" parent="." index="0"]
+tile_data = PoolIntArray( -4, 0, 0, -3, 0, 1, -2, 0, 1, -1, 0, 1, -65536, 0, 1, -65535, 0, 1, -65534, 0, 1, -65533, 0, 1, -65532, 0, 1, -65531, 0, 1, -65530, 0, 5, -65529, 0, 196609, -65528, 0, 196609, -65527, 0, 196609, -65526, 0, 196609, -65525, 0, 196609, -65524, 0, 196609, -65523, 0, 196609, -65522, 0, 196609, -65521, 0, 196609, -65520, 0, 196609, -65519, 0, 196609, -65518, 0, 196609, -65517, 0, 196609, -65516, 0, 196609, -65515, 0, 196609, -65514, 0, 6, -65513, 0, 1, -65512, 0, 1, -65511, 0, 1, -65510, 0, 1, -65509, 0, 1, -65508, 0, 2, 65532, 0, 65540, 65533, 0, 131073, 65534, 0, 131073, 65535, 0, 131073, 0, 0, 131073, 1, 0, 131073, 2, 0, 131073, 3, 0, 131073, 4, 0, 131073, 5, 0, 131073, 6, 0, 131074, 22, 0, 131072, 23, 0, 131073, 24, 0, 131073, 25, 0, 131073, 26, 0, 131073, 27, 0, 131073, 28, 0, 65543, 131068, 0, 65539, 65564, 0, 65539, 196604, 0, 65539, 131100, 0, 65539, 262140, 0, 65539, 196636, 0, 65539, 327676, 0, 65539, 262172, 0, 65539, 393212, 0, 196612, 393213, 0, 196610, 327708, 0, 65539, 393243, 0, 0, 393244, 0, 131079, 458762, 0, 0, 458763, 0, 1, 458764, 0, 2, 458779, 0, 65536, 458780, 0, 65538, 589820, 0, 0, 589821, 0, 1, 589822, 0, 1, 589823, 0, 1, 524288, 0, 1, 524289, 0, 1, 524290, 0, 1, 524291, 0, 1, 524292, 0, 2, 524298, 0, 65536, 524299, 0, 65537, 524300, 0, 65538, 524307, 0, 0, 524308, 0, 1, 524309, 0, 1, 524310, 0, 1, 524311, 0, 2, 524315, 0, 65536, 524316, 0, 65538, 655356, 0, 65536, 655357, 0, 65537, 655358, 0, 65537, 655359, 0, 65537, 589824, 0, 65537, 589825, 0, 65537, 589826, 0, 65537, 589827, 0, 65537, 589828, 0, 65538, 589833, 0, 0, 589834, 0, 131078, 589835, 0, 65537, 589836, 0, 65538, 589843, 0, 65536, 589844, 0, 65537, 589845, 0, 65537, 589846, 0, 65537, 589847, 0, 65538, 589851, 0, 65536, 589852, 0, 65538, 720892, 0, 131072, 720893, 0, 131073, 720894, 0, 131073, 720895, 0, 131073, 655360, 0, 131073, 655361, 0, 131073, 655362, 0, 131073, 655363, 0, 131073, 655364, 0, 196613, 655365, 0, 196609, 655366, 0, 196609, 655367, 0, 196609, 655368, 0, 196609, 655369, 0, 196614, 655370, 0, 131073, 655371, 0, 131073, 655372, 0, 196613, 655373, 0, 196609, 655374, 0, 196609, 655375, 0, 196609, 655376, 0, 196609, 655377, 0, 196609, 655378, 0, 196609, 655379, 0, 196614, 655380, 0, 131073, 655381, 0, 131073, 655382, 0, 131073, 655383, 0, 196613, 655384, 0, 196609, 655385, 0, 196609, 655386, 0, 196609, 655387, 0, 196614, 655388, 0, 131074 )
+
+[node name="BossEnemy" parent="." index="1" instance=ExtResource( 2 )]
+position = Vector2( 247, 46 )
+
+[node name="SpikeCollection" type="Node2D" parent="." index="2"]
+
+[node name="Spikes" parent="SpikeCollection" index="0" instance=ExtResource( 3 )]
+position = Vector2( 384, 144 )
+
+[node name="Spikes10" parent="SpikeCollection" index="1" instance=ExtResource( 3 )]
+position = Vector2( 255, 144 )
+
+[node name="Spikes2" parent="SpikeCollection" index="2" instance=ExtResource( 3 )]
+position = Vector2( 400, 144 )
+
+[node name="Spikes3" parent="SpikeCollection" index="3" instance=ExtResource( 3 )]
+position = Vector2( 415, 144 )
+
+[node name="Spikes6" parent="SpikeCollection" index="4" instance=ExtResource( 3 )]
+position = Vector2( 432, 32 )
+rotation = -1.5708
+
+[node name="Spikes5" parent="SpikeCollection" index="5" instance=ExtResource( 3 )]
+position = Vector2( 432, 63 )
+rotation = -1.5708
+
+[node name="Spikes4" parent="SpikeCollection" index="6" instance=ExtResource( 3 )]
+position = Vector2( 432, 47 )
+rotation = -1.5708
+
+[node name="Spikes9" parent="SpikeCollection" index="7" instance=ExtResource( 3 )]
+position = Vector2( -32, 16 )
+rotation = 1.5708
+
+[node name="Spikes8" parent="SpikeCollection" index="8" instance=ExtResource( 3 )]
+position = Vector2( -32, 47 )
+rotation = 1.5708
+
+[node name="Spikes7" parent="SpikeCollection" index="9" instance=ExtResource( 3 )]
+position = Vector2( -32, 31 )
+rotation = 1.5708
+
+[node name="Door" parent="." index="3" instance=ExtResource( 4 )]
+position = Vector2( -56, 112 )
+scale = Vector2( -1, 1 )
+connection = ExtResource( 5 )
+new_level_path = "res://Metroidvania Resources/Levels/Level_01.tscn"
+
+[node name="Trigger" parent="." index="4" instance=ExtResource( 6 )]
+position = Vector2( -4, 0 )
+
+[node name="CollisionShape2D" parent="Trigger" index="0"]
+position = Vector2( -17, 112 )
+scale = Vector2( -0.827035, 1.79007 )
+shape = SubResource( 1 )
+
+[node name="BlockDoor" parent="." index="5" instance=ExtResource( 8 )]
+visible = false
+collision_layer = 0
+tile_data = PoolIntArray( 458748, 0, 3, 524284, 0, 131075 )
+
+[node name="MissilesPowerup" parent="." index="6" instance=ExtResource( 9 )]
+position = Vector2( 441, 88 )
+[connection signal="died" from="BossEnemy" to="." method="_on_BossEnemy_died"]
+[connection signal="area_triggered" from="Trigger" to="." method="_on_Trigger_area_triggered"]
+[connection signal="body_entered" from="Trigger" to="Trigger" method="_on_Trigger_body_entered"]
+
+[editable path="Trigger"]
