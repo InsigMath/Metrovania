@@ -1,0 +1,40 @@
+# Ignore the SLN files
+*.sln
+
+# Ignore vcxproj files
+*.vcxproj
+
+# Ignore vcxproj.user and file
+*.vcxproj.filters
+*.vcxproj.users
+
+# Ignore .exe
+*.exe
+
+# Ignore obj
+*.obj
+
+# Ignore text
+*.txt
+
+# Ignore tlogs
+*.tlog
+
+# Lastbuildstates
+*.lastbuildstate
+
+# Ignore pdb files
+*.pdb
+
+# Ignore certain files
+Release
+*.vs
+
+# Ignore stex and md5
+*.md5
+*.stex
+
+# Ignore import
+/.import
+*.import
+*.png.import
